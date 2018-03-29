@@ -1,0 +1,988 @@
+2018-01-20 15:14:57 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=127....', 'root', 'jingrui_1hblsqt', NULL)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#8 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#13 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#15 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#18 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#19 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#10 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#13 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#15 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-01-20 15:14:57 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNc8VlIHDRR5HHA3iaJCAAAAAM'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '64654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461297.852
+    'REQUEST_TIME' => 1516461297
+]
+2018-01-20 15:15:29 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=127....', 'root', 'jingrui_1hblsqt', NULL)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#8 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#13 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#15 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#18 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#19 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#10 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#13 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#15 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-01-20 15:15:29 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdEUsdqwzYeBqOkVIrCwAAAAk'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '64770'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461329.822
+    'REQUEST_TIME' => 1516461329
+]
+2018-01-20 15:15:33 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:646
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(646): PDO->__construct('mysql:host=127....', 'root', 'jingrui_1hblsqt', NULL)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(579): yii\db\Connection->createPdoInstance()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#8 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#13 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#15 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#18 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#19 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php:584
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(928): yii\db\Connection->open()
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Connection.php(915): yii\db\Connection->getMasterPdo()
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(1027): yii\db\Command->prepare('<span class="ke...')
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/db/Query.php(254): yii\db\Command->queryOne()
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/db/ActiveQuery.php(294): yii\db\Query->one('<span class="ke...')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 /var/www/html/financial_project/backend/models/Admin.php(68): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(657): backend\models\Admin::findIdentity('<span class="nu...')
+#10 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/web/User.php(343): yii\web\User->getIdentity()
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Component.php(132): yii\web\User->getId()
+#13 /var/www/html/financial_project/backend/controllers/CController.php(24): yii\base\Component->__get('<span class="st...')
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#15 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-01-20 15:15:33 [218.79.182.32][-][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdFSwqeDViVa6kH0P0RgAAAAE'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '64780'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461333.305
+    'REQUEST_TIME' => 1516461333
+]
+2018-01-20 15:15:56 [218.79.182.32][1][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'å¯¹ä¸èµ·ï¼Œæ‚¨çŽ°åœ¨è¿˜æ²¡èŽ·å¾—è¯¥æ“ä½œçš„æƒé™!' in /var/www/html/financial_project/backend/controllers/CController.php:61
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-01-20 15:15:56 [218.79.182.32][1][-][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdLFUXmOiJrlUZdBAfwAAAAAU'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '64827'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461356.007
+    'REQUEST_TIME' => 1516461356
+]
+2018-01-20 15:16:40 [218.79.182.32][1][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'å¯¹ä¸èµ·ï¼Œæ‚¨çŽ°åœ¨è¿˜æ²¡èŽ·å¾—è¯¥æ“ä½œçš„æƒé™!' in /var/www/html/financial_project/backend/controllers/CController.php:61
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-01-20 15:16:40 [218.79.182.32][1][-][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdWDnn54iP9WaKGNTPywAAAAo'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '64969'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461400.268
+    'REQUEST_TIME' => 1516461400
+]
+2018-01-20 15:17:15 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/financial_project/backend/web/assets' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\BaseObject->__construct(Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/di/ServiceLocator.php(136): yii\BaseYii::createObject(Array)
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(608): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /var/www/html/financial_project/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#10 /var/www/html/financial_project/backend/views/layouts/main.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/f...')
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/f...', Array)
+#13 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/var/www/html/f...', Array, Object(backend\controllers\IndexController))
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<nav class="bre...')
+#15 /var/www/html/financial_project/backend/controllers/IndexController.php(67): yii\base\Controller->render('index')
+#16 [internal function]: backend\controllers\IndexController->actionIndex()
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#20 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+2018-01-20 15:17:15 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNde@vAbJw0O8KhUd0MZwAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461435.564
+    'REQUEST_TIME' => 1516461435
+]
+2018-01-20 15:17:16 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/financial_project/backend/web/assets' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/AssetManager.php:215
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\BaseObject->__construct(Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/di/Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/financial_project/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/financial_project/vendor/yiisoft/yii2/di/ServiceLocator.php(136): yii\BaseYii::createObject(Array)
+#6 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(608): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/financial_project/vendor/yiisoft/yii2/web/View.php(225): yii\base\Application->getAssetManager()
+#8 /var/www/html/financial_project/vendor/yiisoft/yii2/web/View.php(285): yii\web\View->getAssetManager()
+#9 /var/www/html/financial_project/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#10 /var/www/html/financial_project/backend/views/layouts/main.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/financial_project/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/f...')
+#12 /var/www/html/financial_project/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/f...', Array)
+#13 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/var/www/html/f...', Array, Object(backend\controllers\IndexController))
+#14 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<nav class="bre...')
+#15 /var/www/html/financial_project/backend/controllers/IndexController.php(67): yii\base\Controller->render('index')
+#16 [internal function]: backend\controllers\IndexController->actionIndex()
+#17 /var/www/html/financial_project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#20 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#21 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+2018-01-20 15:17:16 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdfPC1GzXwCLDBtlLZuQAAAAQ'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461436.167
+    'REQUEST_TIME' => 1516461436
+]
+2018-01-20 15:18:25 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'å¯¹ä¸èµ·ï¼Œæ‚¨çŽ°åœ¨è¿˜æ²¡èŽ·å¾—è¯¥æ“ä½œçš„æƒé™!' in /var/www/html/financial_project/backend/controllers/CController.php:61
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-01-20 15:18:25 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdwevAbJw0O8KhUd0MaAAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461505.327
+    'REQUEST_TIME' => 1516461505
+]
+2018-01-20 15:18:26 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'å¯¹ä¸èµ·ï¼Œæ‚¨çŽ°åœ¨è¿˜æ²¡èŽ·å¾—è¯¥æ“ä½œçš„æƒé™!' in /var/www/html/financial_project/backend/controllers/CController.php:61
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-01-20 15:18:26 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdwuvAbJw0O8KhUd0MagAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461506.136
+    'REQUEST_TIME' => 1516461506
+]
+2018-01-20 15:18:26 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'å¯¹ä¸èµ·ï¼Œæ‚¨çŽ°åœ¨è¿˜æ²¡èŽ·å¾—è¯¥æ“ä½œçš„æƒé™!' in /var/www/html/financial_project/backend/controllers/CController.php:61
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Controller.php(154): backend\controllers\CController->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#3 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2018-01-20 15:18:26 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WmNdwuvAbJw0O8KhUd0MbAAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461506.32
+    'REQUEST_TIME' => 1516461506
+]
+2018-01-20 15:18:28 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "auth/manager-page".' in /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('auth/manager-pa...', Array)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2018-01-20 15:18:28 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'WmNdxOvAbJw0O8KhUd0MbgAAAA4'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'WmNdxOvAbJw0O8KhUd0MbgAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://59.110.168.230:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'REDIRECT_URL' => '/auth/manager-page'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/auth/manager-page'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461508.657
+    'REQUEST_TIME' => 1516461508
+]
+2018-01-20 15:18:30 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "auth/menu-page".' in /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('auth/menu-page', Array)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2018-01-20 15:18:30 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'WmNdxuvAbJw0O8KhUd0MbwAAAA4'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'WmNdxuvAbJw0O8KhUd0MbwAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://59.110.168.230:8080/auth/manager-page'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'REDIRECT_URL' => '/auth/menu-page'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/auth/menu-page'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461510.181
+    'REQUEST_TIME' => 1516461510
+]
+2018-01-20 15:18:32 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "auth/route-page".' in /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('auth/route-page', Array)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2018-01-20 15:18:32 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'WmNdyOvAbJw0O8KhUd0McAAAAA4'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'WmNdyOvAbJw0O8KhUd0McAAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://59.110.168.230:8080/auth/menu-page'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'REDIRECT_URL' => '/auth/route-page'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/auth/route-page'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461512.187
+    'REQUEST_TIME' => 1516461512
+]
+2018-01-20 15:18:33 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "auth/role-page".' in /var/www/html/financial_project/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('auth/role-page', Array)
+#1 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'é¡µé¢æœªæ‰¾åˆ°ã€‚' in /var/www/html/financial_project/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/financial_project/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/financial_project/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2018-01-20 15:18:33 [218.79.182.32][1][pru2d45hcei55i16m5lsm1d6o2][info][application] $_COOKIE = [
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1515502461'
+    'advanced-backend' => 'pru2d45hcei55i16m5lsm1d6o2'
+    '_csrf' => '7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"q‡÷£tïÍ´eJ’Š?³7Ö6ŒóÔ®Êér\"\";}'
+    'advanced-frontend' => '0hdls4jbj5q1ji85q0dbjm7806'
+    '_csrf-frontend' => 'd779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"€½’žvßA‹‚~ì²,A·R±Ä(ú²îgº­_ß\";}'
+    '_identity-backend' => '6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'WmNdyevAbJw0O8KhUd0McQAAAA4'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'WmNdyevAbJw0O8KhUd0McQAAAA4'
+    'HTTP_HOST' => '59.110.168.230:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://59.110.168.230:8080/auth/route-page'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1515502461; advanced-backend=pru2d45hcei55i16m5lsm1d6o2; _csrf=7df0eeaa43a261d6e4dcb1011a819338743d94811a1670375d4c7528913ef8a3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22q%1A%1E%0E%87%18%7F%F7%A3t%EF%CD%B4eJ%92%8A%3F%B37%10%D6%016%8C%F3%D4%AE%CA%E9r%22%22%3B%7D; advanced-frontend=0hdls4jbj5q1ji85q0dbjm7806; _csrf-frontend=d779a34d3899a105964459fa05d57d59ddf6cea108ec4773fb36f1c6df06f664a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22%80%BD%92%9Ev%1E%DFA%05%11%11%01%8B%82%7E%EC%B2%2CA%B7R%B1%C4%28%FA%B2%EEg%BA%AD_%DF%22%3B%7D; _identity-backend=6e14a9c562632b2ffae263a7dfa4a78895fcffad2678579a5200b904188fa175a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22WPRwZyoJUz9TbuTo_yDL9LQwskuU0mYR%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.6 (CentOS) PHP/5.6.19'
+    'SERVER_NAME' => '59.110.168.230'
+    'SERVER_ADDR' => '172.17.118.61'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '218.79.182.32'
+    'DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/financial_project/backend/web/'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/financial_project/backend/web/index.php'
+    'REMOTE_PORT' => '65402'
+    'REDIRECT_URL' => '/auth/role-page'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/auth/role-page'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1516461513.787
+    'REQUEST_TIME' => 1516461513
+]

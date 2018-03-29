@@ -1,0 +1,28 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on  
+# if a directory or a file exists, use it directly  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico$
+# otherwise forward it to index.php  
+RewriteRule . index.php
+
+#域名若没有www,则自动加上
+#RewriteCond %{HTTP_HOST} ^jretec.com(.*)$ [NC]
+#RewriteRule (.*) http://www.jretec.com/ [R=301,L]
+
+<Files *>
+    Options -Indexes
+</Files>
+<FilesMatch ".(gif|jpg|jpeg|png|ico|css|js)$"> 
+    Header set Cache-Control "max-age=21600"
+</FilesMatch>
+
+# Tips：
+# [NC]的意思 即不分大小写
+# [R]的意思 重定向
+# [F]的意思 禁止访问
+# [L]的意思 这是最后一条规则，exit
+# 让apache服务器支持.htaccess
+# 只要简单修改一下apache的httpd.conf配置就可以让APACHE支 持.htaccess了：AllowOverride None 修改为：AllowOverride All

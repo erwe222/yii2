@@ -1,0 +1,1 @@
+<?= \seller\widgets\BreadcrumbWidget::widget();?>

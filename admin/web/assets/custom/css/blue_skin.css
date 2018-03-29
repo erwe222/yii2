@@ -1,0 +1,7 @@
+.layui-header {background:#fff !important;border-bottom:2px solid #00c0ef !important;}
+.layui-header .layui-nav .layui-nav-item > a{color:black !important;}
+.layui-header .layui-logo{background:#00c0ef !important;color:#fff !important; }
+.layui-header .layui-nav .layui-nav-more{
+    border-color: #ccc transparent transparent !important;
+    border-top-color: rgba(255,255,255,.7);
+}
