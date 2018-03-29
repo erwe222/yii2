@@ -4,4 +4,4 @@
 
 #### 2.运行  composer install 命令下载composer依赖扩展包
 
-#### 3.
+#### 3.Linux下修改执行 chmod -R 777 /admin/web/asstes 命令修改 asstes文件夹权限
