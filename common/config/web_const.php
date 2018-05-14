@@ -185,3 +185,22 @@ function formatHumanDateTime($datetime) {
 function addLog($message){
     error_log('['.date('Y-m-d H:i:s').'] '.$message.PHP_EOL,   3,  "./log.txt");
 };
+
+
+/**
+ * 特别的base64_encode 处理了符号'+','/' 避免作为URL时出问题
+ * @param type $str
+ * @return type
+ */
+function special_base64_encode($str) {
+    return str_replace(array('+','/'), array('-','_'), base64_encode($str));
+}
+
+/**
+ * 特别的base64_decode 处理了符号'+','/' 避免作为URL时出问题
+ * @param type $str
+ * @return type
+ */
+function special_base64_decode($str) {
+    return base64_decode(str_replace(array('-','_'), array('+','/'), $str));
+}
